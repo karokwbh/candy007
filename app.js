@@ -4,6 +4,11 @@
 
 function findSomeDifferent(numbers) {
     // 實作寫在這裡
+    if (numbers.filter((x) => x % 2 == 0).length == 1) {
+        return numbers.filter((x) => x % 2 == 0)[0];
+    }
+
+    return numbers.filter((x) => x % 2 != 0)[0];
 }
 
 console.log(findSomeDifferent([2, 4, 0, 100, 4, 11, 2602, 36])) // 印出 11
